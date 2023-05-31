@@ -14,7 +14,7 @@ BOT_TOKEN = getenv("BOT_TOKEN")
 
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID"))
-MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "𝐍𝐄𝐓𝐑𝐎 𝐌𝐔𝐒𝐈𝐂")
+MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", None)
 
 OWNER_ID = list(map(int, getenv("OWNER_ID", "1356469075").split()))
 
@@ -25,8 +25,8 @@ UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/Raichuop07/netro")
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv("GIT_TOKEN", None)
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/NETRO_NETWORK")
-SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/About_Aditya_Army")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/Ranjhaoffical")
+SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/Ranjhamusicsupport")
 
 SUPPORT_HEHE = SUPPORT_GROUP.split("me/")[1]
 
@@ -76,11 +76,11 @@ clean = {}
 autoclean = []
 
 
-START_IMG_URL = getenv("START_IMG_URL", "https://te.legra.ph/file/eceaaf4641738c7a0fb60.jpg")
+START_IMG_URL = getenv("START_IMG_URL", "https://telegra.ph/file/bc25c2213698ec64317fe.jpg")
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
-    "https://te.legra.ph/file/adb1df555699238bf6176.jpg",
+    "https://telegra.ph/file/208bee8c6eb5005fec0e9.jpg",
 )
 
 PLAYLIST_IMG_URL = "https://te.legra.ph/file/4ec5ae4381dffb039b4ef.jpg"
@@ -130,9 +130,11 @@ if UPSTREAM_REPO:
 if PING_IMG_URL:
     if PING_IMG_URL != "assets/Ping.jpeg":
         if not re.match("(?:http|https)://", PING_IMG_URL):
-            PING_IMG_URL = "https://te.legra.ph/file/adb1df555699238bf6176.jpg"
+            PING_IMG_URL = "https://telegra.ph/file/208bee8c6eb5005fec0e9.jpg"
 
 if START_IMG_URL:
     if START_IMG_URL != "assets/Ping.jpeg":
         if not re.match("(?:http|https)://", START_IMG_URL):
-            START_IMG_URL = "https://te.legra.ph/file/eceaaf4641738c7a0fb60.jpg"
+            START_IMG_URL = "https://telegra.ph/file/bc25c2213698ec64317fe.jpg"
+       
+
