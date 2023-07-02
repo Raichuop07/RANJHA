@@ -10,8 +10,6 @@ from AnonX.utils.database.memorydatabase import (
 # Commands
 ACTIVEVC_COMMAND = get_command("ACTIVEVC_COMMAND")
 ACTIVEVIDEO_COMMAND = get_command("ACTIVEVIDEO_COMMAND")
-FAST_AC = get_command("FAST_AC")
-
 
 @app.on_message(filters.command(ACTIVEVC_COMMAND) & SUDOERS)
 async def activevc(_, message: Message):
@@ -67,8 +65,3 @@ async def activevi_(_, message: Message):
             f"**ʟɪsᴛ ᴏғ ᴄᴜʀʀᴇɴᴛʟʏ ᴀᴄᴛɪᴠᴇ ᴠɪᴅᴇᴏᴄʜᴀᴛs ᴏɴ ᴍᴜsɪᴄ ʙᴏᴛ :-**\n\n{text}",
             disable_web_page_preview=True,
         )
-@app.on_message(filters.command(FAST_AC) & SUDOERS)
-async def littleac(_, message: Message):
-    ac_audio = str(len(await get_active_chats()))
-    ac_video = str(len(await get_active_video_chats()))
-    await message.reply_text(f"𝗕𝗼𝘁 𝗔𝗰𝘁𝗶𝘃𝗲 𝗖𝗵𝗮𝘁𝘀 𝗜𝗻𝗳𝗼 • 🔊\n•━━━━━━━━━━━━━━━━━━•\n🎧 ᴀᴜᴅɪᴏ 🎧 » {ac_audio} Active\n•───────•\n🎥 ᴠɪᴅᴇᴏ 🎥 » {ac_video} Active\n•──────•", quote=True)
